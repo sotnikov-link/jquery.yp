@@ -1,0 +1,388 @@
+.yp {
+  display: inline-block;
+  position: relative;
+  background: black;
+}
+
+.yp:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .yp             { zoom: 1; } /* IE6 */
+*:first-child+html .yp { zoom: 1; } /* IE7 */
+
+.yp__player {
+  position: relative;
+}
+
+.yp__player-playlist-button_disabled {
+  display: block;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 45px;
+}
+
+.yp__player iframe {
+  display: block;
+  margin-right: 400px;
+}
+
+/* ELEMENT .yp__scroll... */
+
+.yp__scroll {
+  /*overflow: auto !important;*/
+  position: absolute;
+  top: 62px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  /*max-height: 100px;*/
+}
+
+.yp__scroll > .scroll-element,
+.yp__scroll > .scroll-element div
+{
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 10;
+}
+
+.yp__scroll > .scroll-element {
+    background-color: #434343;
+}
+
+.yp__scroll > .scroll-element div {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.yp__scroll > .scroll-element.scroll-x {
+    bottom: 0;
+    height: 10px;
+    left: 0;
+    width: 100%;
+}
+
+.yp__scroll > .scroll-element.scroll-y {
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 10px;
+}
+
+.yp__scroll > .scroll-element.scroll-x .scroll-element_outer { height: 8px; top: 1px; }
+.yp__scroll > .scroll-element.scroll-y .scroll-element_outer { left: 1px; width: 8px; }
+
+.yp__scroll > .scroll-element .scroll-element_outer { overflow: hidden; }
+.yp__scroll > .scroll-element .scroll-bar { background-color: #8e8e8e; border-radius: 4px; }
+
+
+/* scrollbar height/width & offset from container borders */
+
+.yp__scroll > .scroll-content.scroll-scrolly_visible { left: -10px; margin-left: 10px; }
+.yp__scroll > .scroll-content.scroll-scrollx_visible { top:  -10px; margin-top:  10px; }
+
+.yp__scroll > .scroll-element.scroll-x .scroll-bar { min-width: 10px; }
+.yp__scroll > .scroll-element.scroll-y .scroll-bar { min-height: 10px; }
+
+
+/* update scrollbar offset if both scrolls are visible */
+
+.yp__scroll > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -12px; }
+.yp__scroll > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
+
+.yp__scroll > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -12px; }
+.yp__scroll > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }
+
+
+/* ELEMENT .yp__loader... */
+
+.yp__loader {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.yp__loader .yp__loader-child {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.yp__loader .yp__loader-child:before {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 15%;
+  height: 15%;
+  background-color: #8e8e8e;
+  border-radius: 100%;
+  -webkit-animation: yp__loaderBounceDelay 1.2s infinite ease-in-out both;
+          animation: yp__loaderBounceDelay 1.2s infinite ease-in-out both;
+}
+.yp__loader .yp__loader2 {
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg); }
+.yp__loader .yp__loader3 {
+  -webkit-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+          transform: rotate(60deg); }
+.yp__loader .yp__loader4 {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
+.yp__loader .yp__loader5 {
+  -webkit-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+          transform: rotate(120deg); }
+.yp__loader .yp__loader6 {
+  -webkit-transform: rotate(150deg);
+      -ms-transform: rotate(150deg);
+          transform: rotate(150deg); }
+.yp__loader .yp__loader7 {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+.yp__loader .yp__loader8 {
+  -webkit-transform: rotate(210deg);
+      -ms-transform: rotate(210deg);
+          transform: rotate(210deg); }
+.yp__loader .yp__loader9 {
+  -webkit-transform: rotate(240deg);
+      -ms-transform: rotate(240deg);
+          transform: rotate(240deg); }
+.yp__loader .yp__loader10 {
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg); }
+.yp__loader .yp__loader11 {
+  -webkit-transform: rotate(300deg);
+      -ms-transform: rotate(300deg);
+          transform: rotate(300deg); }
+.yp__loader .yp__loader12 {
+  -webkit-transform: rotate(330deg);
+      -ms-transform: rotate(330deg);
+          transform: rotate(330deg); }
+.yp__loader .yp__loader2:before {
+  -webkit-animation-delay: -1.1s;
+          animation-delay: -1.1s; }
+.yp__loader .yp__loader3:before {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s; }
+.yp__loader .yp__loader4:before {
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s; }
+.yp__loader .yp__loader5:before {
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s; }
+.yp__loader .yp__loader6:before {
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s; }
+.yp__loader .yp__loader7:before {
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s; }
+.yp__loader .yp__loader8:before {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s; }
+.yp__loader .yp__loader9:before {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s; }
+.yp__loader .yp__loader10:before {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s; }
+.yp__loader .yp__loader11:before {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s; }
+.yp__loader .yp__loader12:before {
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s; }
+
+@-webkit-keyframes yp__loaderBounceDelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes yp__loaderBounceDelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* ELEMENT .yp__li... */
+
+.yp__list {
+  display: block;
+  float: right;
+  background: #222222;
+  font: 11px/1.5em 'Roboto', sans-serif;
+  color: #b8b8b8;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 400px;
+}
+
+.yp__list-title {
+  font-size: 15px;
+  color: #ffffff;
+  margin: 15px 15px 0 15px;
+  line-height: 1.5em;
+}
+
+
+.yp__list-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.yp__list-link:hover {
+  text-decoration: underline;
+}
+
+.yp__list-details {
+  border-bottom: 1px solid #3a3a3a;
+  margin: 0;
+  padding: 0 15px 8px 15px;
+}
+
+.yp__channel-link {
+  color: #b8b8b8;
+  text-decoration: none;
+}
+.yp__channel-link:hover {
+  text-decoration: underline;
+}
+
+.yp__li {
+  padding: 0 8px;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.yp__li:hover {
+  background: #525252;
+  cursor: pointer;
+}
+
+.yp__model {
+  display: none;
+}
+
+.yp__li_active {
+  background: #3a3a3a;
+}
+
+.yp__li_active .yp__li-num {
+  display: none;
+}
+
+.yp__li_active .yp__li-play {
+  display: inline;
+  color: #c03636;
+}
+
+.yp__li_active .yp__li-img {
+  border: 2px #c03636 solid;
+  box-sizing: border-box;
+}
+
+.yp__li-status {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 100%;
+  line-height: 60px;
+}
+
+.yp__li-play {
+  display: none;
+}
+
+.yp__li-img {
+  width: 72px;
+  height: 40px;
+  position: absolute;
+  background-position: center center;
+  top: 10px;
+  left: 28px;
+}
+
+.yp__li-text {
+  padding-left: 107px;
+  margin: 8px 10px 8px 0;
+}
+
+.yp__li-title {
+  font-size: 13px;
+  color: #cacaca;
+  display: block;
+  line-height: 1.2em;
+  max-height: 2.4em;
+  overflow: hidden;
+}
+
+.yp__li-author {
+  display: block;
+  color: #767676;
+  /*line-height: 1em;*/
+}
+
+/* for loadind list */
+
+.yp__list > * {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.yp__list .yp__loader {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: all 1s ease-out;
+}
+
+.yp__list_loading > * {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.yp__list_loading .yp__loader {
+  opacity: 1;
+  height: 40px;
+}

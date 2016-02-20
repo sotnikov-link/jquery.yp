@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>YouTube Playlist</title>
+
+    <!-- Requrements -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic,latin-ext,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="jquery.scrollbar.css">
+
+    <!-- JQuery + plugin jQuery Scrollbar -->
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="jquery.scrollbar.min.js"></script>
+
+    <!-- JQuery Plagin: youtube-playlist -->
+    <link rel="stylesheet" href="jquery.yp.css">
+    <script src="jquery.yp.js"></script>
+
+    <!-- Google API -->
+    <script src="https://apis.google.com/js/client.js?onload=onGoogleLoad"></script>
+
+  </head>
+  <body>
+    <script>
+      $(function () {
+        $('.yp').yp()
+        $('.yp__scroll').scrollbar();
+      });
+    </script>
+
+    <div class="yp">
+      <div class="yp__player">
+        <div class="yp__player-playlist-button_disabled"></div>
+        <iframe id="yp__player1" width="560" height="315" src="https://www.youtube.com/embed/i74eZyr4zfY?list=PLJuzssrVaWjbkLz8CSRmOmOfuAfFrdaje&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="yp__list yp__list_loading">
+        <p class="yp__list-title">
+          <a class="yp__list-link" href="http://www.youtube.com/playlist?list=" target="_blank"></a>
+        </p>
+        <p class="yp__list-details">
+          <a class="yp__channel-link" href="http://youtube.com/channel/"></a> • <span class="yp__list-count">0</span> видео
+        </p>
+
+        <div class="yp__scroll">
+
+          <div class="yp__li yp__model">
+            <div class="yp__li-status">
+              <span class="yp__li-num">0</span>
+              <span class="yp__li-play">▶</span>
+            </div>
+            <div class="yp__li-img" style="background-image: url('https://i.ytimg.com/vi/i74eZyr4zfY/default.jpg')"></div>
+            <p class="yp__li-text">
+              <span class="yp__li-title">Заголовок</span>
+              <span class="yp__li-author">Канал</span>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="yp__loader">
+          <div class="yp__loader1 yp__loader-child"></div>
+          <div class="yp__loader2 yp__loader-child"></div>
+          <div class="yp__loader3 yp__loader-child"></div>
+          <div class="yp__loader4 yp__loader-child"></div>
+          <div class="yp__loader5 yp__loader-child"></div>
+          <div class="yp__loader6 yp__loader-child"></div>
+          <div class="yp__loader7 yp__loader-child"></div>
+          <div class="yp__loader8 yp__loader-child"></div>
+          <div class="yp__loader9 yp__loader-child"></div>
+          <div class="yp__loader10 yp__loader-child"></div>
+          <div class="yp__loader11 yp__loader-child"></div>
+          <div class="yp__loader12 yp__loader-child"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
